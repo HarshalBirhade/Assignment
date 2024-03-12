@@ -7,7 +7,6 @@ import Card from "./shared/Card";
 const Location = () => {
   const navigate = useNavigate();
   const states = Object.keys(Indian_states_cities_list.STATE_WISE_CITIES);
-
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [pincode, setPincode] = useState("");
@@ -24,19 +23,16 @@ const Location = () => {
   };
 
   const handlePincodeChange = (e) => {
-    // Filter out non-numeric characters
     const inputPincode = e.target.value.replace(/\D/g, "");
     setPincode(inputPincode);
   };
 
-  // Function to check if all required fields are filled
   const isNextDisabled = !selectedState || !selectedCity || !pincode;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     if (!isNextDisabled) {
-      navigate("/mobile"); // Navigate to the next route after form submission
+      navigate("/mobile");
     }
   };
 

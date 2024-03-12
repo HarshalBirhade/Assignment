@@ -8,7 +8,6 @@ const Mobile = () => {
   const [mobileNumber, setMobileNumber] = useState("");
 
   const handleInputChange = (event) => {
-    // Accept only numeric input and limit to 10 digits
     const inputNumber = event.target.value.replace(/\D/g, "").slice(0, 10);
     setMobileNumber(inputNumber);
   };

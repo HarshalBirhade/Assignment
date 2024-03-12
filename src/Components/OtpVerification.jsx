@@ -10,7 +10,7 @@ function OtpVerification() {
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
-    setIsNextDisabled(false); // Enable the "Next" button when an option is selected
+    setIsNextDisabled(false);
   };
 
   const handleNext = (event) => {
@@ -18,8 +18,6 @@ function OtpVerification() {
     if (selectedOption === "yes") {
       navigate("/welcome");
     } else {
-      // Handle OTP verification logic
-      // Navigate to the appropriate route
     }
   };
 

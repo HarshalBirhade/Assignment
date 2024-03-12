@@ -4,24 +4,21 @@ import { FaArrowLeft } from "react-icons/fa";
 import Card from "./shared/Card";
 
 function Language() {
-  const navigate = useNavigate(); // Initialize useNavigate
-  const [selectedLanguage, setSelectedLanguage] = useState(""); // State to track selected language
-  const [isNextDisabled, setIsNextDisabled] = useState(true); // State to track whether "Next" button should be disabled
+  const navigate = useNavigate();
+  const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [isNextDisabled, setIsNextDisabled] = useState(true);
 
-  // Function to handle radio button change
   const handleRadioChange = (e) => {
     setSelectedLanguage(e.target.value);
-    setIsNextDisabled(false); // Enable "Next" button when a radio button is selected
+    setIsNextDisabled(false);
   };
 
-  // Function to handle "Next" button click
   const handleNextClick = () => {
-    navigate("/login"); // Navigate to "/login" path
+    navigate("/login");
   };
 
-  // Function to handle "Back" button click
   const handleBackClick = () => {
-    navigate("/"); // Navigate to "/" path
+    navigate("/");
   };
 
   return (
@@ -69,7 +66,7 @@ function Language() {
             className="btn"
             type="button"
             onClick={handleNextClick}
-            disabled={isNextDisabled} // Disable "Next" button when no radio button is selected
+            disabled={isNextDisabled}
           >
             Next
           </button>
